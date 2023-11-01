@@ -15,7 +15,7 @@ INSERT into users (
 ) values (
     1,
     "Amit",
-    "IND"
+    "IN"
 );
 
 /* -- DON'T TOUCH BELOW THIS LINE -- */
