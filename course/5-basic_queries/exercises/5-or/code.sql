@@ -1,0 +1,1 @@
+select count(*) as junior_count from users where (country_code = 'CA' or country_code = 'US') and age < 18;
