@@ -16,6 +16,15 @@ CREATE TABLE countries (
   REFERENCES users (id)
 );
 
+alter table countries drop column user_id;
+
+create table users_countries (
+    id INTEGER PRIMARY KEY,
+    country_id INTEGER,
+    user_id INTEGER,
+    UNIQUE (country_id, user_id)
+);
+
 -- Don't touch below this line --
 
 INSERT INTO users(name, age, username, password, is_admin)

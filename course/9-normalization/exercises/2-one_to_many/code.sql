@@ -8,6 +8,10 @@ CREATE TABLE users (
   is_admin BOOLEAN
 );
 
+alter table users drop column country_code;
+
+create table countries (id INTEGER PRIMARY KEY, country_code TEXT, name TEXT, user_id INTEGER, FOREIGN KEY (user_id) REFERENCES users (id) ) ;
+
 -- Don't touch below this line --
 
 INSERT INTO users(name, age, username, password, is_admin)
